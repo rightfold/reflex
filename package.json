@@ -1,0 +1,6 @@
+{
+  "name": "reflex",
+  "dependencies": {
+    "zeromq": "^4.2.0"
+  }
+}

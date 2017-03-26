@@ -1,6 +1,7 @@
 {
   "name": "reflex",
   "dependencies": {
+    "purescript-aff": "^2.0.3",
     "purescript-argonaut-codecs": "^2.1.0",
     "purescript-argonaut-core": "^2.0.1",
     "purescript-console": "^2.0.0",
@@ -12,6 +13,9 @@
     "purescript-node-buffer": "^2.0.1",
     "purescript-node-fs": "^3.0.0",
     "purescript-node-process": "^3.0.0",
-    "purescript-prelude": "^2.5.0"
+    "purescript-prelude": "^2.5.0",
+    "purescript-tailrec": "^2.0.2",
+    "purescript-zmq": "^0.0.1",
+    "purescript-bytestrings": "^2.3.0"
   }
 }
