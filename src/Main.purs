@@ -13,6 +13,7 @@ import Node.FS (FS)
 import Node.FS.Sync (readTextFile)
 import Node.Process (PROCESS, argv, exit)
 import Reflex.Actor (ACTOR, invokeActor, startActor)
+import Reflex.Event (parseEvent)
 import Reflex.Config (Config, parseConfig)
 import Reflex.Prelude
 
@@ -42,7 +43,9 @@ main' config = void $ runAff (fatal <<< message) (const (pure unit)) do
     ZMQ.bindSocket socket config.relay.address
     forever do
       message <- ZMQ.receive socket
-      parTraverse_ (invokeActor `flip` unit) actors
+      case parseEvent message of
+        Left  err   -> liftEff $ error err
+        Right event -> parTraverse_ (invokeActor `flip` event) actors
 
 usage :: ∀ eff. Eff (Effects eff) Unit
 usage = fatal "Usage: reflexd <config-path>"

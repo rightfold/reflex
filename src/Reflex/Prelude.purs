@@ -13,7 +13,7 @@ import Control.Monad.Aff (Aff)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Rec.Class (forever)
-import Data.Either (Either, either)
+import Data.Either (Either(..), either)
 import Data.List (List(Nil), (:))
 import Data.Traversable (traverse)
 import Prelude
