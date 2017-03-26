@@ -15,8 +15,7 @@ type Config =
   }
 
 type RelayConfig =
-  { host :: String
-  , port :: Int
+  { address :: String
   }
 
 type ActorConfig =
@@ -32,9 +31,8 @@ parseConfig = jsonParser >=> decodeJson >=> config
     <*> (traverse actorConfig =<< j .? "actors")
 
   relayConfig j =
-    {host: _, port: _}
-    <$> j .? "host"
-    <*> j .? "port"
+    {address: _}
+    <$> j .? "address"
 
   actorConfig j =
     {path: _}
