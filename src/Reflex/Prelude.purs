@@ -1,5 +1,6 @@
 module Reflex.Prelude
-  ( module Control.Monad.Eff
+  ( module Control.Monad.Aff
+  , module Control.Monad.Eff
   , module Control.Monad.Eff.Class
   , module Control.Monad.Rec.Class
   , module Data.Either
@@ -8,6 +9,7 @@ module Reflex.Prelude
   , module Prelude
   ) where
 
+import Control.Monad.Aff (Aff)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Rec.Class (forever)
