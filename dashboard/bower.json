@@ -1,0 +1,12 @@
+{
+  "name": "dashboard",
+  "dependencies": {
+    "purescript-aff": "^2.0.3",
+    "purescript-argonaut-codecs": "^2.1.0",
+    "purescript-argonaut-core": "^2.0.1",
+    "purescript-eff": "^2.0.0",
+    "purescript-foldable-traversable": "^2.2.0",
+    "purescript-maps": "^2.1.2",
+    "purescript-prelude": "^2.5.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "dashboard",
+  "dependencies": {
+    "ws": "^2.2.2"
+  }
+}
